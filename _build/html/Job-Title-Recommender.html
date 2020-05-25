@@ -1,0 +1,257 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Recommender systems in NLP &mdash; Recommender systems in NLP  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Machine learning in NLP" href="index.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Recommender systems in NLP
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Recommender systems in NLP</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#autocomplete">Autocomplete</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#searching-algorithm">Searching algorithm</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ranking-algorithm">Ranking algorithm</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#skill-recommender">Skill recommender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#profile-recommender">Profile recommender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#online-training-recommender">Online training recommender</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Recommender systems in NLP</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Recommender systems in NLP</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/Job-Title-Recommender.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="recommender-systems-in-nlp">
+<h1>Recommender systems in NLP<a class="headerlink" href="#recommender-systems-in-nlp" title="Permalink to this headline">¶</a></h1>
+<p>This project will introduce several recommender systems in NLP, specifically in the domain of online recruitment. It includes important ideas behind the recommender systems of our web application, also similar with those in recruiting platform like LinkedIn, Xing.</p>
+<div class="section" id="autocomplete">
+<h2>Autocomplete<a class="headerlink" href="#autocomplete" title="Permalink to this headline">¶</a></h2>
+<p>There should be two important parts:</p>
+<div class="section" id="searching-algorithm">
+<h3>Searching algorithm<a class="headerlink" href="#searching-algorithm" title="Permalink to this headline">¶</a></h3>
+<p>I have already implemented a autocomplete function using Trie structure in one of my previous projects - <a class="reference external" href="https://algonotes.readthedocs.io/en/latest/Trie.html#autocomplete">Location autocomplete</a>.
+The basic idea is to suggest full location based on the users input in real time. For example: <br></p>
+<p>The user input: <code class="docutils literal notranslate"><span class="pre">ber</span></code><br>
+The output suggestion:<br>
+<code class="docutils literal notranslate"><span class="pre">berlin,</span> <span class="pre">berlin,</span> <span class="pre">germany</span></code><br>
+<code class="docutils literal notranslate"><span class="pre">bern,</span> <span class="pre">bern,</span> <span class="pre">switzerland</span></code><br>
+<code class="docutils literal notranslate"><span class="pre">bertoua,</span> <span class="pre">est,</span> <span class="pre">cameroon</span></code><br>
+<code class="docutils literal notranslate"><span class="pre">bergen,</span> <span class="pre">hordaland,</span> <span class="pre">norway</span></code><br>
+<code class="docutils literal notranslate"><span class="pre">bergamo,</span> <span class="pre">lombardy,</span> <span class="pre">italy</span></code><br></p>
+<p>The order of the result is determined the ranking algorithm.</p>
+</div>
+<div class="section" id="ranking-algorithm">
+<h3>Ranking algorithm<a class="headerlink" href="#ranking-algorithm" title="Permalink to this headline">¶</a></h3>
+<p>Generate a score for each results. The score depends the features we select based on different problem. For the location problem, the features can be the population, size, economics, importance of the location.</p>
+<p>If we have the information about the user location, language and preferance of the user, by incorporated them, the user will get the most relevant suggestions based on his/her own preferances. <br>
+Took the above example, a user based in Norway, might have <code class="docutils literal notranslate"><span class="pre">bergen,</span> <span class="pre">hordaland,</span> <span class="pre">norway</span></code> as his first option.</p>
+</div>
+</div>
+<div class="section" id="skill-recommender">
+<h2>Skill recommender<a class="headerlink" href="#skill-recommender" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="profile-recommender">
+<h2>Profile recommender<a class="headerlink" href="#profile-recommender" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="online-training-recommender">
+<h2>Online training recommender<a class="headerlink" href="#online-training-recommender" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="Machine learning in NLP" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Ruihao Qiu.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="_static/language_data.js"></script>
+
+  
+
+  <script type="text/javascript" src="_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
