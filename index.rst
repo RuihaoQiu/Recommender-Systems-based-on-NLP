@@ -6,4 +6,4 @@ This document contains the practical use cases in my daily NLP projects.
    :maxdepth: 2
    :glob:
 
-   Job-Title-Recommender
+   Location-Recommender
