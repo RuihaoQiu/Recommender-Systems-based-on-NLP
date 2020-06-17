@@ -8,3 +8,5 @@ This document contains the practical use cases in my daily NLP projects.
 
    Introduction
    Location-Recommender
+   Title-Recommender
+   Skill-Recommender
