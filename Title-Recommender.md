@@ -47,7 +47,7 @@ The most cruicial part is not modeling or prediction, instead is the data prepoc
 After prepocessing, things become easy, as we can see from above, we can vectorize each job title by tfidf embedding[3] followed by LSI[4] demension reduction, then construct the similarity matrix from the vectors.
 
 #### Reference
-1. [Notebook in github](https://github.com/RuihaoQiu/Recommender-Systems-based-on-NLP)
+1. [Notebook with complete code](https://github.com/RuihaoQiu/Recommender-Systems-based-on-NLP)
 1. [gensim tutorial](https://radimrehurek.com/gensim/auto_examples/core/run_similarity_queries.html#sphx-glr-auto-examples-core-run-similarity-queries-py)
 1. [TFIDF wiki](https://en.wikipedia.org/wiki/Tf%E2%80%93idf)
 1. [LSI (Latent Semantic Analysis) wiki](https://en.wikipedia.org/wiki/Latent_semantic_analysis#Latent_semantic_indexing)
