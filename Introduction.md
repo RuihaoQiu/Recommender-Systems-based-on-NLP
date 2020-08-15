@@ -1,7 +1,7 @@
 ## Introduction
 Recommender systems is one of most successful machine learning applications. We are exposed to the items/informations recommended by these systems everywhere in our daily life.
 
-This project will introduce several recommender systems in NLP, specifically in the domain of online recruitment. It includes the important ideas behind the recommender systems in our web application, it might be also similar with those in recruiting platforms like LinkedIn, Xing.
+This project will introduce several recommender systems in NLP, specifically in the domain of online recruitment. I will explain the important ideas behind the recommender systems in our web application, it might be also similar with those in recruiting platforms like LinkedIn, Xing.
 
 One of my main jobs is to design and develop recommender systems on the skill-based matching app. Before going into this specific recommender system, I would like to go over the general concepts and methods of current recommender system in different domains.
 
@@ -13,7 +13,7 @@ Recommender system is just a machine that introduce the users to products that t
 - Job platforms, such as LinkedIn, they are making two way recommendation, recommend jobs to job seeker, as well as, recommend profiles to job providers.
 - Advertisement, real-estate market, dating market …
 
-Overall, there are two different kinds of recommender system in terms of methodology - collaborative filter and content-based filter.
+Overall, in terms of methodology, there are two different kinds of recommender systems  - collaborative filter and content-based filter.
 
 ### Collaborative filter
 The Collaborative filter recommend items based on user's historical records, the user's explicit interest (like/dislike, rating or reviews) and implicit interest (clicks on an item, bookmarking an item’s URL, time spent on the page)
