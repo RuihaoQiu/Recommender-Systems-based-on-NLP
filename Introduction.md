@@ -1,12 +1,12 @@
 ## Introduction
-Recommender systems is one of most successful machine learning applications. We are exposed to the items/informations recommended by these systems everywhere in our daily life.
+Recommender systems is one of the most successful machine learning applications. We are exposed to the products/informations recommended by these systems everywhere in our daily life.
 
 This project will introduce several recommender systems in NLP, specifically in the domain of online recruitment. I will explain the important ideas behind the recommender systems in our web application, it might be also similar with those in recruiting platforms like LinkedIn, Xing.
 
-One of my main jobs is to design and develop recommender systems on the skill-based matching app. Before going into this specific recommender system, I would like to go over the general concepts and methods of current recommender system in different domains.
+One of my main jobs is to design and develop recommender systems on the skill-based matching app. Before getting into this specific topic, I would like to go over the general concepts and methods of current recommender system in different domains.
 
 ### Recommender system in general
-Recommender system is just a machine that introduce the users to products that they might be interested in. They are everywhere in our daily life.
+Recommender system is just a machine that introduce the users to products that they might be interested in. They can be:
 
 - E-commerce platforms, such as Amazon, recommend their customers various of products based on huge amount of data from millions of customers and products.
 - Entertainment providers, such as Youtube, Spotify and Netflix, recommend songs and movies to their users.
@@ -47,9 +47,9 @@ Use user's features (e.g. personal information, behaviors etc.) to predict their
 Use the item's features(e.g. product information) to predict the user's preference for the item. For example, a user has listened 1000 songs, train a model on these song's characters, then we can predict how the user will vote for a new song.
 
 ### Mix approach
-As I mentioned above, the deep learning architect can include different information. It can be view as a mix approach between collaborative filter and content-based filter.
+As I mentioned above, the deep learning architect can include different information. It can be viewed as a mix approach between collaborative filter and content-based filter.
 
-Won't go into more details here, feel free to read this article see how youtube implement this architect in their system - [Deep Neural Networks for YouTube Recommendations.](https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/45530.pdf)
+I won't go into more details here, feel free to read this article see how youtube implement this architect in their system - [Deep Neural Networks for YouTube Recommendations.](https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/45530.pdf)
 
 
 **References**
