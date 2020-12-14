@@ -1,5 +1,5 @@
 ## Skill Recommender
-No we are going recommend skills for users. This function is to help the users to have their own full skillset. Most of the users know some of their skills, but they might neglect some important/in-demand skills, or they might also want to know what skills to develop in order to keep competitive. In this application, our users just need to input a few skills, then it will keep recommending the most relevant skills, the users just need to select from them. This largely improves the user's experience.
+In this chapter, we are going to recommend skills for users. This function is to help the users to "discover" their own full skillset. Most of the users know some of their skills, but they might neglect some important/in-demand skills, or they might also want to know what skills to develop in order to keep competitive. In this system, our users just need to input his position, then it will keep recommending the most relevant skills. Our users just need to select from them. This largely improves the user's experience.
 
 ### Recommend skills from job title
 As I have mentioned in the previous chapter, we have find the most important skills for each standard job title, by using our title standardizer and skill extractor.
@@ -45,9 +45,9 @@ find_skills("business developer")
  I would say this simple method make pretty promising results.
 
 ### Recommend skills from current skillset
-In order to recommend skills from skills, we need the skill correlations. The skill correlation matrix is similar title correlation in the previous chapter. The difference is I also use skill hierachy to re-order the correlation, therefore skills in the same family tend to be more closed to each other.
+In order to recommend skills from skills, we need the skill correlations. The skill correlation matrix is similar to the title correlation in the previous chapter. However, in skill correlation, I also use skill hierachy to re-order the correlation, therefore skills in the same family tend to be closer to each other.
 
-We don't need the full matrix here, only nearest skills for each skill will be enough. For one skill, we just need to take it nearest neighbors, however, for multiple skills, we take all their neighbors and re-sort them, see the code below: 
+We don't need the full matrix here, only nearest skills (e.g. top 10) for each skill will be enough. For one skill, we just need to take it nearest neighbors, however, for multiple skills, we take all their neighbors and re-sort them based on their popularity, see the code below: 
 
 ```
 def sort_skills(input_skill_score):
@@ -88,6 +88,7 @@ find_skills(["Python", "Java", "Django"])
 Also not bad right?
 
 We can always improve our recommendations by considering more information (e.g. users data) and try different enbeddings.
+
 
 #### References
 1. [Notebook with complete code](https://github.com/RuihaoQiu/Recommender-Systems-based-on-NLP)
