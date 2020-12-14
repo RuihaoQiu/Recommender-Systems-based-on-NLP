@@ -10,3 +10,5 @@ This document contains the practical use cases in my daily NLP projects.
    Location-Recommender
    Title-Recommender
    Skill-Recommender
+   Job-Recommender
+   Course-Recommender
