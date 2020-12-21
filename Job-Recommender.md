@@ -74,10 +74,18 @@ WMD allow us the compare two texts by considering the word similarity. In genera
 model.wmdistance(skillset_1, skillset_2)
 ```
 
-As mention the this [blog](https://medium.com/@adriensieg/text-similarities-da019229c894), there are many different ways to compute text similarity. The Transformers are becoming popular, it will interesting to do some experiments on them. I am making effort to introduce them into our projects. In the furture, I will start a new section to introduce how the transformers can impact on NLP recommender systems.
+As mention the this [blog](https://medium.com/@adriensieg/text-similarities-da019229c894), there are many different ways to compute text similarity.
+
+The Transformers are becoming popular, it will interesting to do some experiments on them. I am making effort to introduce them into our projects. In the furture, I will start a new section to introduce how the transformers can "transform" NLP recommender systems.
+
+### Recommend based on job title
+The above skill-based recommender systems will work well in perfect situations which is far from the real-world situations. Many irrelavant skills might be extract from the description for different and inevitable reasons. To deal with this issue, we found a better strategy - filter jobs by titles and then sort them by similarity. The first layer - job filters can effective exclude irrelevant jobs based on irrelevant skills. There is nothing complex, as we already disscussed in Title recommender section. The filter is basically select jobs with the most relevant titles.
 
 
-### References
+At the end, as we can see from the above, the recommender systems are basically unsupervised models, which did not consider the user's preference. There will be many different approches to build supervised models based on what kind of user data you have, as we briefly discuss in the introduction section. We will not go into details here.
+
+
+#### References
 - [Gemsim documents](https://radimrehurek.com/gensim/auto_examples/index.html#documentation)
 - [TFIDF](https://en.wikipedia.org/wiki/Tf%E2%80%93idf)
 - [Latent semantic indexing](https://nlp.stanford.edu/IR-book/html/htmledition/latent-semantic-indexing-1.html)
